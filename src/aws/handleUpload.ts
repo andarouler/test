@@ -18,8 +18,13 @@ function handleUpload(videoFile : any, videoName : string ){
       secretAccessKey: SECRET_KEY
   })
   
+  
   // Create S3 service object
-  var s3 = new AWS.S3({apiVersion: '2006-03-01'});
+var s3 = new AWS.S3( {
+    endpoint: 's3-eu-central-1.amazonaws.com',
+    signatureVersion: 'v4',
+    region: 'eu-central-1'
+} );
 
   // call S3 to retrieve upload file to specified bucket
   var uploadParams : any = {Bucket: S3_BUCKET, Key: videoName, Body: videoFile};
@@ -41,6 +46,10 @@ function handleUpload(videoFile : any, videoName : string ){
       console.log('Upload Success', data.Location);
     }
   });
+
+uploadParams = {Bucket: 'node-sdk-aicovo-tds2022', Key: videoName, Expires: 600};
+var url = s3.getSignedUrl('getObject', uploadParams);
+console.log('The URL is: ', url);
 }
 
 export { handleUpload }
