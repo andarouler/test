@@ -1,0 +1,51 @@
+{
+    "name": "aicovo-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.0.1",
+        "@testing-library/user-event": "^13.5.0",
+        "aws-sdk": "^2.1125.0",
+        "axios": "^0.27.2",
+        "bootstrap": "^4.6.0",
+        "dotenv": "^16.0.0",
+        "jsqr": "1.3.1",
+        "react": "^18.0.0",
+        "react-bootstrap": "^2.2.3",
+        "react-router-dom": "^6.3.0",
+        "react-scripts": "^5.0.1",
+        "react-webcam": "5.2.2",
+        "util": "^0.12.4",
+        "uuid": "^8.3.2",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "set PORT=3010 && react-scripts start",
+        "build": "CI=false && react-scripts build",
+        "test": "react-scripts test --passWithNoTests",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/uuid": "^8.3.4",
+        "prettier": "2.6.2"
+    }
+}
