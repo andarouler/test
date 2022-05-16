@@ -1,9 +1,9 @@
 export class ContentDTO{
     contentId: number;
     //interviewId: Interview;
-    headline1: string;
-    headline2: string;
+    headline1: string = "Wilkommen zu deinem Videointerview!";
+    headline2: string = "";
     introText: string;
     buttonText: string;
-    duration: number;
+    duration: number = 180;
 }
