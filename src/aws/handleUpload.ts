@@ -11,7 +11,7 @@ function handleUpload(videoFile : any, videoName : string ){
   //get env variables 
   const KEY_ID : string = process.env.REACT_APP_KEY_ID;
   const SECRET_KEY : string = process.env.REACT_APP_ACCESS_KEY;
-  const S3_BUCKET : string = process.env.REACT_APP_S3_BUCKET;
+  const S3_BUCKET : string = 'node-sdk-aicovo-tds2022';
 
   AWS.config.update({
       accessKeyId: KEY_ID,
